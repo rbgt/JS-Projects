@@ -1,34 +1,16 @@
-<!-- src/App.vue -->
 <template>
-  <div id="app">
-    <DropArea :onFileRead="updateFileContent" />
-    <div v-if="fileContent">
-      <h3>File Content:</h3>
-      <pre>{{ fileContent }}</pre>
-    </div>
+  <div>
+    <h1>My App</h1>
+    <DropZone />
   </div>
 </template>
 
 <script>
-import DropArea from './components/DropArea.vue';
+import DropZone from '@/components/DropZone.vue'
 
 export default {
   components: {
-    DropArea,
-  },
-  data() {
-    return {
-      fileContent: null,
-    };
-  },
-  methods: {
-    updateFileContent(content) {
-      this.fileContent = content;
-    },
-  },
-};
+    DropZone
+  }
+}
 </script>
-
-<style>
-/* Add any global styles here if necessary */
-</style>
